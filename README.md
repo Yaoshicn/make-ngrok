@@ -1,5 +1,5 @@
 # Make-Ngrok
-One bash to rule ngrok all! Build ngrok server and clients without suffer!
+One bash to rule ngrok all! Building ngrok server and clients without suffer!
 
 ## Dependencies
 - Go (1.8)
