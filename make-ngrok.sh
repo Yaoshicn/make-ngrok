@@ -12,20 +12,20 @@ if ["$1" = ""]; then
     exit
 fi
 
-printf "Domain:${domain}\n"
+printf "Domain:$domain\n"
 
 printf "${RED}Git clone...${NC}\n"
 git clone https://github.com/inconshreveable/ngrok && cd $root
 printf "${RED}Done${NC}\n"
 
-printf "${RED}Install go-bindata...${NC}"
+printf "${RED}Install go-bindata...${NC}\n"
 go get github.com/jteeuwen/go-bindata
 [ -d $root/bin ] || mkdir $root/bin && cp $GOPATH/bin/go-bindata $root/bin
 printf "${RED}Done${NC}\n"
 
 [ -d $certificate_dir ] || mkdir $certificate_dir && cd $certificate_dir
 
-printf "${RED}Generate self-sign certificate...${NC}"
+printf "${RED}Generate self-sign certificate...${NC}\n"
 openssl genrsa -out rootCA.key 2048
 openssl req -x509 -new -nodes -key rootCA.key -subj "/CN=$domain" -days 5000 -out rootCA.pem
 openssl genrsa -out device.key 2048
