@@ -11,7 +11,7 @@ git clone https://github.com/Yaoshicn/make-ngrok.git
 cd make-ngrok
 ./make-ngrok.sh [YOUR DOMAIN] 
 ```
-(Maybe need sudo)
+(Maybe sudo is needed)
 
 ## Build Clients
 - Linux
